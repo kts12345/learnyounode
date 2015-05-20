@@ -3,7 +3,6 @@ var _  = require('lodash')
 
 //-----------------------------------
 fs.readFile(process.argv[2], onRead);
-
 //-----------------------------------
 function onRead(err, data) {
     if (err) {
@@ -11,7 +10,8 @@ function onRead(err, data) {
     }
     else {
         console.log(_(data).filter(newLine).size());
-
-        function newLine(c) { return c == '\n'.charCodeAt(0); }
     }
 };
+//-----------------------------------
+function newLine(c) { return c == '\n'.charCodeAt(0); }
+
