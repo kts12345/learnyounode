@@ -9,10 +9,10 @@ function onRead(err, list) {
         throw err;
     }
     else {
-        list.filter(hasExtention).forEach(_.ary(console.log, 1));
+        list.filter(extMatch).forEach(_.ary(console.log, 1));
     }
 };
 //-----------------------------------
-function hasExtention(file) {
+function extMatch(file) {
     return path.extname(file) === ('.' + process.argv[3]);
 }
