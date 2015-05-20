@@ -2,8 +2,6 @@ var fs = require('fs')
 var _ = require('lodash')
 
 //-----------------------------------
-var err, data;
-
 fs.readFile(process.argv[2], onRead);
 
 //-----------------------------------
