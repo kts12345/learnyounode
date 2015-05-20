@@ -1,22 +1,18 @@
-var fs = require('fs')
-var _  = require('lodash')
+var fs   = require('fs')
+var path = require('path')
+var _    = require('lodash')
 //-----------------------------------
 fs.readdir(process.argv[2], onRead);
-//-----------------------------------
+//-------------`----------------------
 function onRead(err, list) {
     if (err) {
         throw err;
     }
     else {
-        _(list).filter(hasExtention).forEach(log);
+        list.filter(hasExtention).forEach(_.ary(console.log, 1));
     }
 };
 //-----------------------------------
-function hasExtention(fileName) {
-    return (new RegExp('.' + process.argv[3] + '$')).test(fileName); 
+function hasExtention(file) {
+    return path.extname(file) === ('.' + process.argv[3]);
 }
-
-function log(a) {
-    console.log(a);
-};
-
