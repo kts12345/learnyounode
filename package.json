@@ -1,0 +1,13 @@
+{
+  "name": "learnyounode",
+  "version": "0.0.0",
+  "description": "learnyounode",
+  "main": "app.js",
+  "author": {
+    "name": "kts123",
+    "email": ""
+  },
+  "dependencies": {
+    "lodash": "^3.10.0"
+  }
+}
