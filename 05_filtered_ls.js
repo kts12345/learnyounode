@@ -17,7 +17,7 @@ function extMatch(file) {
     return path.extname(file) === ('.' + process.argv[3]);
 }
 
-/*  
+/*
     式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式
         FILTERED LS / Exercise 5 of 13
     式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式式
