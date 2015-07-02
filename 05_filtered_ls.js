@@ -1,19 +1,22 @@
-var fs   = require('fs')
-var path = require('path')
-var _    = require('lodash')
+var fs   = require('fs');
+var path = require('path');
+var _    = require('lodash');
 
-fs.readdir(process.argv[2], onRead);
+try {
+    fs.readdir(process.argv[2], onRead);
+} catch (e) {
+    console.error(e);
+}
+
 
 function onRead(err, list) {
-    if (err) {
-        throw err;
-    }
-    else {
-        list.filter(extMatch).forEach(_.ary(console.log, 1));
-    }
+    if (err) 
+        console.error(e);
+    else 
+        list.filter(match).forEach(_.ary(console.log, 1));
 };
 
-function extMatch(file) {
+function match(file) {
     return path.extname(file) === ('.' + process.argv[3]);
 }
 

@@ -1,22 +1,19 @@
-var fs = require('fs')
-var _  = require('lodash')
+var fs = require('fs');
+var _  = require('lodash');
 
 var err = null, data = null;
 try {
     data = fs.readFileSync(process.argv[2]);
-}
-catch (e) {
+} catch (e) {
     err = e;
 }
 onRead(err, data);
 
 function onRead(err, data) {
-    if (err) {
-        throw err;
-    }
-    else {
+    if (err)
+        console.error(err);
+    else 
         console.log(_(data).filter(newLine).size());
-    }
 };
 
 function newLine(c) { return c == '\n'.charCodeAt(0); }

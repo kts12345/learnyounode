@@ -4,7 +4,11 @@ var _    = require('lodash');
 
 function filter(dir, ext, cb) {
     var onRead2 = _.bind(onRead, null, _, _, ext, cb);
-    fs.readdir(dir, onRead2);
+    try {
+        fs.readdir(dir, onRead2);
+    } catch (e) {
+        cb(e, null);
+    }
 };
 
 function onRead(err, list, ext, cb) {

@@ -1,14 +1,12 @@
-﻿var _      = require('lodash');
-var filter = require('./06_02_make_it_modular'); 
+﻿var filter = require('./06_02_make_it_modular'); 
+var _      = require('lodash');
 
-var dir = process.argv[3];
-var ext = process.argv[3];
-
-filter(dir, ext, print);
+var argv = process.argv;
+filter(argv[2], argv[3], print);
 
 function print(err, list) {
     if (err)
-        console.log("err :" + err);
+        console.error("err :" + err);
     else
         list.forEach(_.ary(console.log, 1));
 };

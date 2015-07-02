@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c3148e0d-95ac-4516-b8f8-d4551c7287ee</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>06_01_make_it_modular.js</StartupFile>
+    <StartupFile>05_filtered_ls.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
